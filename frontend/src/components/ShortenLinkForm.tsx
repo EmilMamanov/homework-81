@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../App.css';
 
 const ShortenLinkForm: React.FC = () => {
     const [originalUrl, setOriginalUrl] = useState<string>('');
@@ -22,7 +23,7 @@ const ShortenLinkForm: React.FC = () => {
             <h1>Shorten your link!</h1>
             <label>
                 Enter the link:
-                <input
+                <input className="input-field"
                     type="text"
                     value={originalUrl}
                     onChange={(e) => setOriginalUrl(e.target.value)}
@@ -30,9 +31,9 @@ const ShortenLinkForm: React.FC = () => {
             </label>
             <button onClick={handleShortenClick}>Shorten</button>
             {shortUrl && (
-                <div>
+                <div className="result-container">
                     <p>Your link now looks like this:</p>
-                    <a href={shortUrl} target="_blank" rel="noopener noreferrer">
+                    <a className="link-result" href={shortUrl} target="_blank" rel="noopener noreferrer">
                         {shortUrl}
                     </a>
                 </div>

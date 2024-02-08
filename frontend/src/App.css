@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 }
+
+.link-result {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.input-field {
+  padding: 8px;
+  margin: 8px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
